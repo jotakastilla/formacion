@@ -1,0 +1,12 @@
+{
+  "name": "formacion-videopodcast-landing",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing page estática para formación profesional de videopodcast",
+  "scripts": {
+    "dev": "python3 -m http.server 8000"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.6.1"
+  }
+}

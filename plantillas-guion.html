@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plantillas de guion | Local Reset Studios</title>
+    <meta
+      name="description"
+      content="Módulo de plantillas de guion y ayudante de Local Reset para revisar estructura, duración y mejoras de producción."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+      <script>window.va = window.va || function(){(window.vaq = window.vaq || []).push(arguments);};</script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </head>
+  <body>
+    <div class="noise"></div>
+    <main>
+      <section class="section">
+        <div class="container legal-wrap reveal visible">
+          <p class="eyebrow">Comunidad</p>
+          <h1 class="register-title">Plantillas de guion</h1>
+
+          <div class="card assistant-card">
+            <h2>Ayudante de guion</h2>
+            <p class="assistant-intro">
+              Ayudante entrenado con miles de estructuras y enfoques de guion para
+              podcast y videopodcast, con metodología audio-first.
+            </p>
+            <p class="assistant-intro">
+              Pega aquí tu guion y te damos una revisión rápida: estructura, correcciones,
+              duración estimada y sugerencias de efectos/sonido.
+            </p>
+            <p class="assistant-intro">
+              Marco aplicado: cold open, intro, bloques con transiciones, hooks cada 3-5
+              minutos, cues técnicos ([MUSIC], [SFX], [PAUSE], [TIMESTAMP]) y cierre con CTA.
+            </p>
+
+            <div class="assistant-controls">
+              <label>
+                Tipo de pieza
+                <select id="scriptType" class="form-field">
+                  <option value="solo">Episodio en solitario</option>
+                  <option value="entrevista">Entrevista</option>
+                  <option value="marca">Podcast de marca</option>
+                </select>
+              </label>
+              <label>
+                Duración objetivo (min)
+                <input id="targetMinutes" class="form-field" type="number" min="1" max="180" value="20" />
+              </label>
+            </div>
+
+            <label>
+              Guion
+              <textarea id="scriptInput" class="form-field" rows="10" placeholder="Pega aquí tu guion..."></textarea>
+            </label>
+
+            <button id="runAssistant" class="btn" type="button">Activar ayudante de Local Reset</button>
+
+            <div id="assistantResult" class="assistant-result" hidden>
+              <h3>Resultado del ayudante</h3>
+              <ul id="assistantSummary" class="assistant-list"></ul>
+              <h4>Sugerencias de mejora</h4>
+              <ul id="assistantFixes" class="assistant-list"></ul>
+              <h4>Efectos y diseño sonoro sugerido</h4>
+              <ul id="assistantFx" class="assistant-list"></ul>
+            </div>
+          </div>
+
+          <div class="card guide-card">
+            <p>
+              Aquí tienes estructuras base para grabar más rápido y comunicar con claridad.
+              Puedes copiar y adaptar cada formato a tu proyecto.
+            </p>
+            <div class="guide-grid templates-grid">
+              <article class="guide-item">
+                <h2>Videopodcast de entrevistas</h2>
+                <pre class="template-pre">1. Apertura + presentación del invitado (1-2 min)
+2. Contexto: por qué está aquí (2 min)
+3. Bloque 1: historia y recorrido (8 min)
+4. Bloque 2: aprendizaje práctico (8 min)
+5. Bloque 3: errores y recomendaciones (6 min)
+6. Preguntas rápidas (3 min)
+7. Cierre + CTA final (1 min)</pre>
+              </article>
+              <article class="guide-item">
+                <h2>Episodio de una sola persona</h2>
+                <pre class="template-pre">1. Hook inicial (30-45 seg)
+2. Qué vas a aprender hoy (1 min)
+3. Desarrollo en 3 ideas (12-18 min)
+4. Ejemplo real o caso personal (4 min)
+5. Resumen de claves (1 min)
+6. CTA: siguiente paso (30 seg)</pre>
+              </article>
+              <article class="guide-item">
+                <h2>Formato noticias</h2>
+                <pre class="template-pre">1. Titular principal del episodio (30 seg)
+2. Noticias destacadas (3-5 bloques x 2 min)
+3. Contexto rápido por noticia (45 seg)
+4. Opinión / lectura profesional (1 min)
+5. Cierre con agenda próxima (1 min)</pre>
+              </article>
+              <article class="guide-item">
+                <h2>Formato curiosidades</h2>
+                <pre class="template-pre">1. Pregunta de arranque (20 seg)
+2. Curiosidad 1 (2-3 min)
+3. Curiosidad 2 (2-3 min)
+4. Curiosidad 3 (2-3 min)
+5. Dato extra / recomendación (1 min)
+6. Cierre participativo (30 seg)</pre>
+              </article>
+              <article class="guide-item">
+                <h2>Estructura base de episodio</h2>
+                <pre class="template-pre">Apertura → Contexto → Desarrollo
+→ Ejemplo práctico → Resumen
+→ Llamada a la acción</pre>
+              </article>
+            </div>
+          </div>
+
+          <p class="back-link-wrap">
+            <a href="materiales-comunidad.html" class="back-link">← Volver al área de comunidad</a>
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="plantillas-guion.js"></script>
+  </body>
+</html>
