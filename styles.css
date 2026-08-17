@@ -61,6 +61,10 @@ textarea {
   background: #060606;
 }
 
+.section-cta {
+  margin-top: 32px;
+}
+
 .welcome-video {
   padding-top: 34px;
   padding-bottom: 18px;
@@ -153,54 +157,6 @@ p {
 .hero-content > * {
   position: relative;
   z-index: 2;
-}
-
-.hero-video-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.hero-video-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background:
-    radial-gradient(circle at 78% 34%, rgba(255, 212, 0, 0.07), rgba(0, 0, 0, 0) 35%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.58));
-}
-
-.hero-bg-video {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-  object-fit: cover;
-  object-position: 82% center;
-  display: block;
-  z-index: 0;
-  filter: brightness(0.48) saturate(0.84) contrast(1.04);
-}
-
-.hero-audio-mark {
-  position: absolute;
-  left: -3%;
-  top: 9%;
-  width: 106%;
-  height: min(52vh, 440px);
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.2;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 260'%3E%3Cpath d='M0 130 C60 44 140 216 210 130 C280 44 360 216 430 130 C500 44 580 216 650 130 C720 44 800 216 870 130 C940 44 1020 216 1090 130 C1140 70 1180 100 1200 130' stroke='rgba(255,212,0,0.42)' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 260'%3E%3Cpath d='M0 150 C80 246 140 54 220 150 C300 246 360 54 440 150 C520 246 580 54 660 150 C740 246 800 54 880 150 C960 246 1020 54 1100 150 C1140 182 1180 170 1200 150' stroke='rgba(255,255,255,0.22)' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-size: 980px 46%, 1160px 46%;
-  background-position: 0 28%, 0 72%;
-  filter: blur(0.4px);
-  animation: watermarkWaveShift 20s linear infinite;
 }
 
 .eyebrow {
@@ -398,32 +354,6 @@ textarea.form-field {
   color: var(--yellow);
   text-decoration: none;
 }
-
-.wavefield {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  opacity: 0.16;
-  z-index: 1;
-}
-
-.wavefield span {
-  width: 3px;
-  border-radius: 999px;
-  background: var(--yellow);
-  animation: wave 2.1s ease-in-out infinite;
-}
-
-.wavefield span:nth-child(1) { height: 42px; }
-.wavefield span:nth-child(2) { height: 86px; animation-delay: 0.12s; }
-.wavefield span:nth-child(3) { height: 140px; animation-delay: 0.24s; }
-.wavefield span:nth-child(4) { height: 190px; animation-delay: 0.36s; }
-.wavefield span:nth-child(5) { height: 140px; animation-delay: 0.48s; }
-.wavefield span:nth-child(6) { height: 86px; animation-delay: 0.6s; }
-.wavefield span:nth-child(7) { height: 42px; animation-delay: 0.72s; }
 
 .value-strip {
   border-top: 1px solid var(--line);
@@ -1742,15 +1672,6 @@ textarea.form-field {
   }
 }
 
-@keyframes watermarkWaveShift {
-  from {
-    background-position: 0 28%, 0 72%;
-  }
-  to {
-    background-position: 980px 28%, -1160px 72%;
-  }
-}
-
 @supports (height: 100dvh) {
   .hero {
     min-height: 100dvh;
@@ -1832,14 +1753,6 @@ textarea.form-field {
     min-height: auto;
     padding-top: 94px;
     padding-bottom: 86px;
-  }
-
-  .hero-audio-mark {
-    left: -7%;
-    top: 12%;
-    width: 114%;
-    height: min(38vh, 290px);
-    opacity: 0.16;
   }
 
   .studio-modal__dialog {
@@ -1962,12 +1875,6 @@ textarea.form-field {
     grid-template-columns: 1fr;
   }
 
-  .hero-audio-mark {
-    top: 16%;
-    height: 210px;
-    opacity: 0.13;
-  }
-
   .studio-modal {
     padding: 12px;
   }
@@ -2002,16 +1909,6 @@ textarea.form-field {
 
   .studio-gallery__thumbs {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-audio-mark {
-    animation: none;
-  }
-
-  .hero-bg-video {
-    display: none;
   }
 }
 
@@ -2169,148 +2066,25 @@ textarea.form-field {
   border: 0;
 }
 
-.chat-widget {
+.whatsapp-business-cta {
   position: fixed;
   right: 18px;
-  bottom: 86px;
+  bottom: 20px;
   z-index: 140;
-}
-
-.chat-launch {
-  border: 1px solid rgba(255, 212, 0, 0.7);
-  background: rgba(255, 212, 0, 0.16);
-  color: var(--yellow);
+  border: 1px solid #25d366;
+  border-radius: 999px;
+  background: #25d366;
+  color: #07120a;
+  padding: 12px 18px;
   font-weight: 800;
-  border-radius: 999px;
-  padding: 10px 16px;
-  cursor: pointer;
-}
-
-.chat-panel {
-  position: absolute;
-  right: 0;
-  bottom: 54px;
-  width: min(360px, calc(100vw - 24px));
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  overflow: hidden;
-  background: #0b0b0b;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
-}
-
-.chat-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  padding: 10px 12px;
-  border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.chat-title {
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.92rem;
-}
-
-.chat-subtitle {
-  font-size: 0.74rem;
-}
-
-.chat-close {
-  border: 0;
-  background: transparent;
-  color: #fff;
-  font-size: 1.4rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.chat-messages {
-  padding: 10px;
-  display: grid;
-  gap: 8px;
-  max-height: 230px;
-  overflow: auto;
-}
-
-.chat-bubble {
-  border-radius: 10px;
-  padding: 8px 10px;
-  font-size: 0.88rem;
-  line-height: 1.4;
-}
-
-.chat-bubble--bot {
-  background: rgba(255, 255, 255, 0.07);
-  color: var(--muted);
-}
-
-.chat-bubble--user {
-  background: rgba(255, 212, 0, 0.2);
-  color: #fff;
-  justify-self: end;
-}
-
-.chat-quick-actions {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 6px;
-  padding: 0 10px 10px;
-}
-
-.chat-quick-actions button {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.03);
-  color: #fff;
-  font-size: 0.72rem;
-  padding: 6px 7px;
-  cursor: pointer;
-}
-
-.chat-form {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 8px;
-  padding: 0 10px 10px;
-}
-
-.chat-form input {
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.03);
-  color: #fff;
-  padding: 9px 10px;
-  font: inherit;
-}
-
-.chat-form button {
-  border: 1px solid rgba(255, 212, 0, 0.8);
-  border-radius: 10px;
-  background: var(--yellow);
-  color: #111;
-  font-weight: 700;
-  padding: 9px 11px;
-  cursor: pointer;
-}
-
-.chat-ctas {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-  padding: 0 10px 11px;
-}
-
-.chat-ctas a {
-  font-size: 0.76rem;
-  color: var(--yellow);
   text-decoration: none;
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.chat-ctas a:hover {
-  text-decoration: underline;
+.whatsapp-business-cta:hover {
+  background: #35e57a;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 820px) {
@@ -2318,14 +2092,9 @@ textarea.form-field {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .chat-widget {
+  .whatsapp-business-cta {
     right: 12px;
-    bottom: 84px;
-  }
-
-  .chat-panel {
-    width: min(350px, calc(100vw - 18px));
-    bottom: 50px;
+    bottom: 14px;
   }
 }
 

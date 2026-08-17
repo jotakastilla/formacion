@@ -33,7 +33,7 @@
           </h1>
           <p class="lead">
             Completa este formulario y te llamaremos para iniciar el proceso de
-            pago. Indica también qué fin de semana te viene mejor en abril, mayo o junio.
+            pago. Indica qué mes te viene mejor: septiembre, octubre o noviembre.
           </p>
 
           <form
@@ -56,27 +56,12 @@
               <input class="form-field" type="tel" name="telefono" />
             </label>
             <label>
-              Fin de semana preferido (sábado + domingo)
-              <select class="form-field" name="fecha_preferida" required>
-                <option value="" selected disabled>Selecciona un fin de semana</option>
-                <optgroup label="Abril 2026">
-                  <option value="2026-04-11_2026-04-12">11 y 12 de abril (sábado y domingo)</option>
-                  <option value="2026-04-18_2026-04-19">18 y 19 de abril (sábado y domingo)</option>
-                  <option value="2026-04-25_2026-04-26">25 y 26 de abril (sábado y domingo)</option>
-                </optgroup>
-                <optgroup label="Mayo 2026">
-                  <option value="2026-05-02_2026-05-03">2 y 3 de mayo (sábado y domingo)</option>
-                  <option value="2026-05-09_2026-05-10">9 y 10 de mayo (sábado y domingo)</option>
-                  <option value="2026-05-16_2026-05-17">16 y 17 de mayo (sábado y domingo)</option>
-                  <option value="2026-05-23_2026-05-24">23 y 24 de mayo (sábado y domingo)</option>
-                  <option value="2026-05-30_2026-05-31">30 y 31 de mayo (sábado y domingo)</option>
-                </optgroup>
-                <optgroup label="Junio 2026">
-                  <option value="2026-06-06_2026-06-07">6 y 7 de junio (sábado y domingo)</option>
-                  <option value="2026-06-13_2026-06-14">13 y 14 de junio (sábado y domingo)</option>
-                  <option value="2026-06-20_2026-06-21">20 y 21 de junio (sábado y domingo)</option>
-                  <option value="2026-06-27_2026-06-28">27 y 28 de junio (sábado y domingo)</option>
-                </optgroup>
+              Mes preferido
+              <select class="form-field" name="mes_preferido" required>
+                <option value="" selected disabled>Selecciona un mes</option>
+                <option value="septiembre_2026">Septiembre</option>
+                <option value="octubre_2026">Octubre</option>
+                <option value="noviembre_2026">Noviembre</option>
               </select>
             </label>
             <label>
@@ -97,8 +82,8 @@
           <p id="formStatus" class="form-status" aria-live="polite"></p>
 
           <p class="lead register-note">
-            Te llamaremos personalmente para iniciar el pago y confirmar el fin de
-            semana completo (sábado y domingo) que mejor te encaje.
+            Te llamaremos personalmente para iniciar el pago y confirmar la fecha
+            que mejor te encaje dentro del mes elegido.
           </p>
 
           <p class="back-link-wrap">
